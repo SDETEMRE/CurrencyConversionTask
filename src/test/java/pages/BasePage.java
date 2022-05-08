@@ -2,9 +2,12 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+import java.util.List;
 
 public class BasePage {
     public BasePage() {
@@ -27,13 +30,16 @@ public class BasePage {
     public WebElement currency;
 
     @FindBy(xpath = "//*[@id=\"currency-exchange-app\"]/div/div/div[2]/table/tbody/tr[1]/td[4]/span/span/span")
-    public WebElement payseraAmount;
+    public WebElement paysAmount;
 
     @FindBy(xpath = "//*[@id=\"currency-exchange-app\"]/div/div/div[2]/table/tbody/tr[1]/td[5]/span/span/span[1]")
     public WebElement bankAmount;
 
     @FindBy(xpath = "//tr[1]//td[5]//span[starts-with(@class, 'other-bank-loss')]")
     public WebElement loss;
+
+    @FindBy(xpath = "//tr[1]//td[2]")
+    public WebElement offRate;
 
     public WebElement selectCountry(String country){
         return Driver.get().findElement(By.xpath("//a[contains(.,'"+country+"')]"));

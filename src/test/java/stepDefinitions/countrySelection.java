@@ -17,8 +17,6 @@ public class countrySelection {
         basePage.countryListBtn.click();
         Thread.sleep(3000);
         basePage.selectCountry(country).click();
-//        ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", basePage.selectCountry(country));
-//        ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].click();", basePage.selectCountry(country));
         Thread.sleep(3000);
     }
 
@@ -28,6 +26,5 @@ public class countrySelection {
         System.out.println(basePage.currency.getText());
         Assert.assertEquals("UAH",basePage.currency.getText());
     }
-
 
 }
