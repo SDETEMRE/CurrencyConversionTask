@@ -15,7 +15,8 @@ public class currencyChanges {
     double defaultCurrency;
 
     @When("the default currencies display")
-    public void the_default_currencies_display() {
+    public void the_default_currencies_display() throws InterruptedException {
+        Thread.sleep(3000);
         defaultCurrency = Double.parseDouble(basePage.offRate.getText().trim());
         System.out.println(basePage.offRate.getText());
     }

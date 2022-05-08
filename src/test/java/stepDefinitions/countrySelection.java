@@ -14,6 +14,7 @@ public class countrySelection {
     @When("the user selects {string}")
     public void the_user_selects(String country) throws InterruptedException {
         basePage.countrySelectionBtn.click();
+        Thread.sleep(2000);
         basePage.countryListBtn.click();
         Thread.sleep(3000);
         basePage.selectCountry(country).click();

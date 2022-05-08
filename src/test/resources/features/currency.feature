@@ -1,4 +1,4 @@
-@wip
+
 Feature: Currency Specs
 
   Background:
@@ -11,7 +11,7 @@ Feature: Currency Specs
   Scenario: Exchange amount
     When the pays amount bigger than bank amount
     Then the loss is displayed
-
+  @wip
   Scenario: Currency selection
     When the default currencies display
     When the user selects "Ukraine"
