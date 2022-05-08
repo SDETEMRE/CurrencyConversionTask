@@ -13,7 +13,7 @@ Feature: Currency Specs
     Then the loss is displayed
 
   Scenario: Currency selection
-    Given the default currencies display
+    When the default currencies display
     When the user selects "Ukraine"
     Then option should be changed to the respective default currency for that country
     Then currencies changes
