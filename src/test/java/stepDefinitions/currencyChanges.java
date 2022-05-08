@@ -21,10 +21,11 @@ public class currencyChanges {
     }
 
     @Then("currencies changes")
-    public void currencies_changes() {
+    public void currencies_changes() throws InterruptedException {
         System.out.println(basePage.offRate.getText());
 
         double newCurrency = Double.parseDouble(basePage.offRate.getText().trim());
+        Thread.sleep(4000);
         Assert.assertNotEquals(defaultCurrency,newCurrency);
     }
 }

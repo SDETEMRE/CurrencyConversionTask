@@ -21,9 +21,10 @@ public class countrySelection {
     }
 
     @Then("option should be changed to the respective default currency for that country")
-    public void option_should_be_changed_to_the_respective_default_currency_for_that_country() {
+    public void option_should_be_changed_to_the_respective_default_currency_for_that_country() throws InterruptedException {
 
         System.out.println(basePage.currency.getText());
+        Thread.sleep(2000);
         Assert.assertEquals("UAH",basePage.currency.getText());
     }
 
