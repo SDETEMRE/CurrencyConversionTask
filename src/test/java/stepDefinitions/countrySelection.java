@@ -26,7 +26,7 @@ public class countrySelection {
 
         System.out.println(basePage.currency.getText());
         Thread.sleep(2000);
-        Assert.assertEquals("UAH",basePage.currency.getText());
+        Assert.assertEquals("BGN",basePage.currency.getText());
     }
 
 }

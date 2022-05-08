@@ -14,7 +14,7 @@ Feature: Currency Specs
 
   Scenario: Currency selection
     When the default currencies display
-    When the user selects "Ukraine"
+    When the user selects "Bulgaria"
     Then option should be changed to the respective default currency for that country
     Then currencies changes
 
